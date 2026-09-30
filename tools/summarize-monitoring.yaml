@@ -1,0 +1,22 @@
+name: summarize-monitoring
+description: Aggregate named monitoring checks into a deterministic overall status.
+input_schema:
+  type: object
+  required:
+    - checks
+  properties:
+    checks:
+      type: array
+      description: Monitoring checks with name and pass, warn, or fail status.
+      items:
+        type: object
+output_schema:
+  type: object
+implementation:
+  type: script
+  path: summarize-monitoring.py
+  runtime: python3
+annotations:
+  read_only: true
+  cost: none
+  idempotent: true

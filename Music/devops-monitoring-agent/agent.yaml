@@ -1,0 +1,10 @@
+spec_version: "0.1.0"
+name: devops-monitoring-agent
+version: 0.1.0
+description: Framework-independent agent for deterministic DevOps service and metric health assessment.
+skills:
+  - health-assessment
+  - incident-triage
+tools:
+  - evaluate-health
+  - summarize-monitoring
